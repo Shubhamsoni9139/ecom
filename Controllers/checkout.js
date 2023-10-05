@@ -15,7 +15,7 @@ const totalElement = document.getElementById('total');
 
 // Set the values in the formData object
 $scope.formData.subtotal = subtotalElement.textContent;
-$scope.formData.shipping = '$10.00';
+$scope.formData.shipping = '10.00';
 $scope.formData.total = totalElement.textContent;
 	$scope.submitForm = function(isValid) {
         if (isValid) {
