@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="invoiceApp">
+<head>
+    <title>Invoice Template Design</title>
+    <link rel="stylesheet"  href="css/bill.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    
+</head>
+<body ng-app="myApp" ng-controller="InvoiceController">
+
+    <div class="wrapper">
+        <div class="invoice_wrapper">
+            <div class="header">
+                <div class="logo_invoice_wrap">
+                    <div class="logo_sec">
+                        <img src="images/logo.png" alt="code logo">
+                        <div class="title_wrap">
+                            <p class="title bold" ng-model="companyName">{{companyName}}</p>
+                        </div>
+                    </div>
+                    <div class="invoice_sec">
+                        <p class="invoice bold">INVOICE</p>
+                        <p class="invoice_no">
+                            <span class="bold">Invoice</span>
+                            <span ng-model="invoiceNumber">#{{invoiceNumber}}</span>
+                        </p>
+                        <p class="date">
+                            <span class="bold">Date</span>
+                            <span ng-model="date">{{date}}</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="bill_total_wrap">
+                    <div class="bill_sec">
+                        <p>Bill To</p>
+                        <p ng-model=customerfirstName class="bold name">{{customerfirstName}} <span ng-model="customerlastName">{{customerlastName}}</span></p>
+                        <br>
+                        <p ng-model="customeremail">{{customeremail}}</p>
+                        <p ng-model="customerAddress1">  {{customerAddress1}}</p>
+                            <p ng-model="customerAddress2">  {{customerAddress2}}</p>
+                                <p ng-model="customerPhone">   {{customerPhone}}</p>
+                    </div>
+                </div>
+                <div class="invoice_sec" style="margin-right: 30px ; margin-bottom: 20px;">
+                    <p class="invoice bold">Total</p>
+                    
+                    <p class="Subtotal">
+                        <span class="bold">SubTotal</span>
+                        <span ng-model="subtotal">{{subtotal}}</span>
+                    </p>
+                    <p class="Shiping">
+                        <span class="bold">Shipping</span>
+                        <span ng-model="shipping">{{shipping}}</span>
+                    </p>
+                    <p class="Total">
+                        <span class="bold">Total</span>
+                        <span ng-model="total">{{total}}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="Controllers/checkout.js"></script>
+
+<script>
+ var app = angular.module('myApp', []);
+  app.controller('InvoiceController', function($scope) {
+    // Set the values from formData to the variables in the bill page
+    console.log(formData);
+    $scope.companyName = $scope.formData.company_name;
+    $scope.invoiceNumber = 218745
+    $scope.date = $scope.formData.date;
+    $scope.getTodaysDate = function() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+      dd = '0' + dd;
+    }
+
+    if (mm < 10) {
+      mm = '0' + mm;
+    }
+
+    $scope.date = mm + '/' + dd + '/' + yyyy;
+  };
+    $scope.customerfirstName = $scope.formData.first;
+    $scope.customerlastName = $scope.formData.last;
+    $scope.customeremail = $scope.formData.email;
+    $scope.customerAddress1 = $scope.formData.address1;
+    $scope.customerAddress2 = $scope.formData.address2;
+    $scope.customerPhone= $scope.formData.phno;
+    $scope.subtotal = $scope.formData.subtotal;
+    $scope.shipping = $scope.formData.shipping;
+    $scope.total = $scope.formData.total;
+});
+
+
+</script>
+</html>

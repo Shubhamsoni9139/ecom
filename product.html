@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <!-- CSS -->
+    <link href="css/productstyle.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <meta name="robots" content="noindex,follow" />
+
+  </head>
+
+  <body>
+    <header class="header shop">
+      <div class="middle-inner">
+        <div class="container" style="margin-bottom: 20px;">
+          <div class="row">
+            <div class="col-lg-2 col-md-2 col-12">
+              <!-- Logo -->
+              <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+              </div>
+              <!--/ End Logo -->
+          </div>
+        </div>
+      </div>
+      <!-- Header Inner -->
+      <div class="header-inner" >
+        <div class="container">
+          <div class="cat-nav-head col-lg-9 col-12">
+                <div class="menu-area">
+                  <!-- Main Menu -->
+                  <nav class="navbar navbar-expand-lg navbar-collapse ">
+                    <div class="navbar-collapse">
+                      <div class="nav-inner"  >
+                        <ul class="nav main-menu menu navbar-nav" style="text-align: center;">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Product</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                          </ul>
+                      </div>
+                    </div>
+                  </nav>
+                  <!--/ End Main Menu -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ End Header Inner -->
+    </header>
+    <!--/ End Header -->
+    <main class="container">
+  
+      <!-- Left Column / Headphones Image -->
+      <div class="left-column">
+        <img style="margin-top: 40px" src="images/img-1.jpg">
+      </div>
+  
+  
+      <!-- Right Column -->
+      <div style="margin-bottom: 40px" class="right-column">
+  
+        <!-- Product Description -->
+        <div class="product-description">
+          <span>Shirt</span>
+          <h1 id="product-name">Casual Shirt</h1>
+          <p id="product-desc">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        </div>
+  
+        <!-- Product Configuration -->
+        <div class="product-configuration">
+  
+          <!-- Product Color -->
+          <div class="product-color">
+            <span>Color</span>
+  
+            <div class="color-choose">
+              <div>
+                <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+                <label for="red"><span></span></label>
+              </div>
+              <div>
+                <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+                <label for="blue"><span></span></label>
+              </div>
+              <div>
+                <input data-image="black" type="radio" id="black" name="color" value="black">
+                <label for="black"><span></span></label>
+              </div>
+            </div>
+  
+          </div>
+  
+          <!-- Cable Configuration -->
+          <div class="cable-config">
+            <span>Size</span>
+  
+            <div class="cable-choose">
+              <button>S</button>
+              <button>M</button>
+              <button>L</button>
+              <button>XL</button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Product Pricing -->
+        <div class="product-price">
+          <span id="product-price">$45</span>
+          <a href="cart2.html" class="cart-btn" style="background-color: orange;">Add to cart</a>
+        </div>
+      </div>
+    </main>
+  
+    <script>
+      const product = {
+        id: "jfhgbvnscs",
+        name: "Casual Shirt",
+        price: 45,
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        img: "images/img-1.jpg",
+      };
+  
+      // Update the product information in the HTML elements
+      document.getElementById("product-name").innerText = product.name;
+      document.getElementById("product-desc").innerText = product.desc;
+      document.getElementById("product-price").innerText = "$" + product.price;
+    </script>
+  </body>
+  
+
+
+
+</html>
