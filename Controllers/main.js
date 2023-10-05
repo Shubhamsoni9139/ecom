@@ -20,14 +20,14 @@ let generateShop = () => {
       let search = basket.find((y) => y.id === id) || [];
       return `
     <div id=product-id-${id} class="item">
-    <a href="product.html">
+    <a href="#">
     <img width="220" src=${img} alt="">
 </a>
       <div class="details">
         <h3>${name}</h3>
         <p>${desc}</p>
         <div class="price-quantity">
-          <h2>$ ${price} </h2>
+          <h2>Rs- ${price} </h2>
           <div class="buttons">
             <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
             <div id=${id} class="quantity">${
